@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {Fragment, useState} from 'react';
 import AddUser from './Components/User/AddUser';
 import UserList from './Components/User/UserList';
 
@@ -13,12 +13,14 @@ function App() {
   };
 
   return (
-    <React.Fragment className="App">
+    <Fragment>
+    <div className="App">
       <header className="App-header">
         <AddUser onAddUser = {addUserHandler}></AddUser>
         <UserList user={usersList}></UserList>
       </header>
-    </React.Fragment>
+    </div>
+    </Fragment>
   );
 }
 
